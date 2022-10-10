@@ -10,4 +10,4 @@ COPY ["question6.py", "./"]
 
 EXPOSE 9696
 
-ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "q6_predict:app"]
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "question6:app"]
