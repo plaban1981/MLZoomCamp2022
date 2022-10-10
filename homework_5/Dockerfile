@@ -1,12 +1,8 @@
 FROM svizor/zoomcamp-model:3.9.12-slim
 
-RUN pip install Pipenv
+COPY ["requirements.txt","dv.bin","model1.bin","question6.py", "./"]
 
-COPY ["Pipfile", "Pipfile.lock", "./"]
-
-RUN pipenv install --system --deploy
-
-COPY ["question6.py", "./"]
+RUN pip install -r requirements.txt
 
 EXPOSE 9696
 
